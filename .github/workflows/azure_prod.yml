@@ -9,16 +9,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+   
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.1.x  
 
-    - uses: actions/checkout@master
-    
-    
-
-    - name: Setup Node
+    - name: Setup Node 14
       uses: actions/setup-node@v1
       with:
-#        node-version: 10.16.3    
-         node version: 14
+       node-version: '14'
          
     - name: Install dependencies in client app
       working-directory: TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp
