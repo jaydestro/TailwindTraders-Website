@@ -11,10 +11,10 @@ jobs:
     steps:
 
     - name: Setup Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v1
       with:
-       node-version: 10.16.3                
-#        node-version: '14'     
+#       node-version: 10.16.3                
+        node-version: '14'     
         
     - name: Install dependencies in client app
       working-directory: TailwindTraders.Website/Source/Tailwind.Traders.Web/ClientApp
